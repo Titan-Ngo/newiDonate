@@ -1,0 +1,151 @@
+<html>
+<head>
+<div class="topbox lightgray">
+<img src="http://i64.tinypic.com/dlq4g8.jpg" border="0" style="height:60px; width:37px">
+<a href="http://127.0.0.1:5000/"> <img style="position:absolute; top:8px; left:45px; width:195px; height:60px" src="http://i67.tinypic.com/2mynf2s.jpg">
+</a></div>
+<div class="thinline mediumgray"></div>
+<link href="https" ://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<style>
+/*shapes*/ 
+.topbox {
+height: 80px;
+width: 1515px;
+}
+.smallbox {
+height: 70px;
+width: 1515px;
+}
+.textbox {
+height: 360spx;
+width: 1522px;
+}
+.thinline {
+height: 1px;
+width: 1515px;
+}
+.bottomline{
+width:1366px;
+width: 1515px;
+}
+    
+/*fonts*/ 
+h3 {
+margin-left: 15px;
+font-family: 'Raleway', Helvetica, Arial, sans-serif;
+font-size: 20px;
+line-height: 30px;
+color:Black;
+}
+h4 {
+margin-left: 4px;
+font-family: 'Raleway', Helvetica, Arial, sans-serif;
+font-size: 22px;
+line-height: 15px;
+color:Black;
+}
+h5 {
+margin-left: 11px;
+font-family: 'Cabin', Helvetica, Arial, sans-serif;
+font-size: 19px;
+line-height: 16px;
+color:Black;
+}
+p {
+font-family: 'Cabin', Helvetica, Arial, sans-serif;
+font-size: 15px;
+line-height: 25px;
+margin-left: 8px;
+}
+
+/*button*/ 
+input.MyButton {
+font-family: 'Cabin',Helvetica, Arial, sans-serif;
+width: 165px;
+padding: 9px;
+cursor: pointer;
+font-weight: bold;
+font-size: 120%;
+background: Black;
+color: White;
+border: 1px solid Black;
+border-radius: 10px;
+}
+input.MyButton:hover {
+color:White;
+background: rgb(102, 102, 102);
+border: 1px solid Black;
+}
+
+/*colors*/ 
+.lightgray {
+background-color:rgb(217, 217, 217);
+}
+.mediumgray {
+background-color:rgb(159,159,163);
+}
+.gray {
+background-color:rgb(191, 191, 191);
+}
+.darkgray {
+background-color:rgb(102, 102, 102);
+}
+.red {
+background-color:rgb(230, 0, 0);
+}
+</style>
+
+
+<body>
+<!--10 questions-->
+
+<form action="/eligibility" method="get">
+<i><p>(Please mark only one answer per question.)</p></i>
+<b><h4>Do you identify as female?</h4></b>
+  <input type="checkbox" name="q1" value="yes">Yes<br>
+  <input type="checkbox" name="q1" value="no">No<br>
+<b><h4>Are you a male, self - identified or biologically determined, who has had sexual contact (oral or anal sex) with another male within the last 12</h4>
+<h4> months?</h4>
+</h4></b>
+  <input type="checkbox" name="q2" value="yes">Yes<br>
+  <input type="checkbox" name="q2" value="no">No<br>
+<b><h4>Have you ever been in juvie, lockup, jail or prison for more than 72 hours in the last 12 months?</h4>
+ </b> <input type="checkbox" name="q3" value="yes">Yes<br>
+  <input type="checkbox" name="q3" value="no">No<br>
+<b><h4>If you were born or lived in a malaria infested country for more than 5 years, have you stayed continuously in the USA or Canada for at least 3 </h4>
+<h4>years? (Note: Any non-western country will usually be deemed as malaria infested.) </h4>
+ </b> <input type="checkbox" name="q4" value="yes">Yes<br>
+  <input type="checkbox" name="q4" value="no">No<br>
+<b><h4>Have you travelled to a Malaria infested country within the last 12 months?(Note: Any non-western country will usually be deemed as malaria </h4>
+<h4> infested.) </h4>
+ </b> <input type="checkbox" name="q5" value="yes">Yes<br>
+  <input type="checkbox" name="q5" value="no">No<br>
+<b><h4>Are you at least 110 lbs and 18 years of age?</h4>
+ </b> <input type="checkbox" name="q6" value="yes">Yes<br>
+  <input type="checkbox" name="q6" value="no">No<br>
+<b><h4>Have you ever engaged in chronic alcoholism or prostitution?</h4>
+ </b> <input type="checkbox" name="q7" value="yes">Yes<br>
+  <input type="checkbox" name="q7" value="no">No<br>
+<b><h4>Are you currently on medication, either prescribed or non - prescribed?</h4>
+ </b> <input type="checkbox" name="q8" value="yes">Yes<br>
+  <input type="checkbox" name="q8" value="no">No<br>
+<b><h4>Are you either vegan or vegetarian?</h4>
+  </b><input type="checkbox" name="q9" value="yes">Yes<br>
+  <input type="checkbox" name="q9" value="no">No<br>
+<b><h4>What is your blood type?</h4>
+  </b><input type="checkbox" name="q10" value="A+">A+<br>
+  <input type="checkbox" name="q10" value="A-">A-<br>
+  <input type="checkbox" name="q10" value="B+">B+<br>
+  <input type="checkbox" name="q10" value="B-">B-<br>
+  <input type="checkbox" name="q10" value="O+">O+<br>
+  <input type="checkbox" name="q10" value="O-">O-<br>
+  <input type="checkbox" name="q10" value="AB+">AB+<br>
+  <input type="checkbox" name="q10" value="AB-">AB-<br>
+<i><p>Press "Submit" when finished.</p></i>
+  <input class="MyButton" value="Submit" type="submit">
+</form>
+
+</body>

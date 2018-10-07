@@ -1,0 +1,128 @@
+<html>
+<head>
+<div class="topbox lightgray">
+<img src="http://i64.tinypic.com/dlq4g8.jpg" border="0" style="height:60px; width:37px">
+<a href="http://127.0.0.1:5000/"> <img style="position:absolute; top:8px; left:45px; width:195px; height:60px" src="http://i67.tinypic.com/2mynf2s.jpg">
+</a></div>
+<div class="thinline mediumgray"></div>
+<link href="https" ://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+
+<style>
+/*shapes*/ 
+.topbox {
+height: 80px;
+width: 1515px;
+}
+.smallbox {
+height: 70px;
+width: 1515px;
+}
+.textbox {
+height: 360spx;
+width: 1522px;
+}
+.thinline {
+height: 1px;
+width: 1515px;
+}
+.bottomline{
+width:1366px;
+width: 1515px;
+}
+    
+/*fonts*/ 
+h3 {
+margin-left: 15px;
+font-family: 'Raleway', Helvetica, Arial, sans-serif;
+font-size: 45px;
+line-height: 30px;
+color:Black;
+}
+h4 {
+text-align:center;
+font-family: 'Cabin', Helvetica, Arial, sans-serif;
+font-size: 30px;
+line-height: 20px;
+color:Black;
+}
+h5 {
+margin-left: 15px;
+font-family: 'Cabin', Helvetica, Arial, sans-serif;
+font-size: 19px;
+line-height: 16px;
+color:Black;
+}
+p {
+font-family: 'Cabin', Helvetica, Arial, sans-serif;
+font-size: 15px;
+line-height: 25px;
+margin-left: 15px;
+}
+/*button*/ 
+input.MyButton {
+font-family: 'Cabin',Helvetica, Arial, sans-serif;
+width: 165px;
+padding: 9px;
+cursor: pointer;
+font-weight: bold;
+font-size: 120%;
+background: Black;
+color: White;
+border: 1px solid Black;
+border-radius: 10px;
+}
+input.MyButton:hover {
+color:White;
+background: rgb(102, 102, 102);
+border: 1px solid Black;
+}
+/*colors*/ 
+.lightgray {
+background-color:rgb(217, 217, 217);
+}
+.mediumgray {
+background-color:rgb(159,159,163);
+}
+.gray {
+background-color:rgb(191, 191, 191);
+}
+.darkgray {
+background-color:rgb(102, 102, 102);
+}
+.red {
+background-color:rgb(230, 0, 0);
+}
+</style>
+
+<body>
+<h3>Please Input Your Appointment Information Here</h3>
+<p></p>
+<form action="/overview">
+<h5>Date:</h5>
+    <input style="margin-left:15px" name="userDate" placeholder="MM/DD/YY" type="text">
+
+<h5>Time:</h5>
+    <input style="margin-left:15px" name="userTime" placeholder="HH:MM" type="text">
+  <p></p>
+  <input style="margin-left: 15px;" type="checkbox" name="ToD" value="AM">AM<br>
+  <input style="margin-left: 15px;" type="checkbox" name="ToD" value="PM">PM<br>
+
+<h5>Location:</h5>
+    <input style="margin-left:15px" name="userLoc" placeholder="location" type="text">
+
+<h5>Type of Procedure:</h4>
+<h5>   <i>(Please Check Only One)</i></h5>
+<form style="margin-left: 15px;" action="/overview" method="get">
+  <input style="margin-left: 15px;" type="checkbox" name="type" value="Blood">Whole Blood<br>
+  <input style="margin-left: 15px;" type="checkbox" name="type" value="Red">Power Red<br>
+  <input style="margin-left: 15px;" type="checkbox" name="type" value="Platelet">Platelet Donation<br>
+  <input style="margin-left: 15px;" type="checkbox" name="type" value="Plasma">Plasma Donation<br>
+
+<p>Click "Submit" when finished.</p>
+<input style="margin-left: 15px;" class="MyButton" type="submit" value="Submit">
+</form>
+</body>
+</html>
