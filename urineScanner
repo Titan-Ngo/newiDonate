@@ -1,0 +1,70 @@
+def colorDeterminer(im):
+    '''extracts the color of the toilet seat'''
+    (width, height) = im.size
+    totalRedColor = 0
+    totalGreenColor = 0
+    toalBlueColor = 0
+    redArray = list(range(width*height))
+    greenArray = list(range(width*height))
+    blueArray = list(range(width*height))
+    totalArray = list(range(width*height))
+    x = 0
+    for x in range(width):
+        for y in range(height):
+            (red, green, blue) = im.getpixel((x,y))
+            redArray[x] = red
+            greenArray[x] = green
+            blueArray[x] = blue
+            totalArray[x] = red + green + blue
+            x = x + 1
+            totalRedColor += red
+            totalGreenColor += green
+            totalBlueColor += blue
+    averageColorScheme = (totalRedColor/(width*height),totalGreenColor/(width*height), totalBlueColor/(width*height))
+    minIndex = totalArray.index(min(totalArray))
+    maxIndex = totalArray.index(max(totalArray))
+    minValue = (redArray[minIndex], greenIndex[minIndex], blueIndex[minIndex])
+    maxValue = (redArray[maxIndex], greenIndex[maxIndex], blueIndex[maxIndex])
+    values = [minValue, maxValue]
+    if minValue[0] + minValue[1] + minValue[2] >=averageColorScheme[0](0.95) + averageColorScheme[1](10.95) + averageColorScheme[2](0.95) and averageColorScheme[0](1.05) + averageColorScheme[1](1.05) + averageColorScheme[2](1.05) >= maxValue[0] + maxValue[1] + maxValue[1]:
+        return values
+    else:
+        minValue = (0.95 * redArray[minIndex], 0.95 * greenIndex[minIndex], 0.95 * blueIndex[minIndex])
+        maxValue = (1.05 * redArray[maxIndex], 1.05 * greenIndex[maxIndex], 1.05 * blueIndex[maxIndex])
+        values = [minValue, maxValue]
+        return values
+
+values = colorDeterminer(im)
+
+def colorExtraction(im):
+    (width, height) = im.size
+    redTracker = 0
+    greenTracker = 0
+    blueTracker = 0
+    x = 1
+    for x in range(width):
+        for y in range(height):
+                (red, green, blue) = im.getpixel((x,y))
+                    if values[0][0]=< red <= values[1][0] and values[0][1] =< green <= values[1][1] and values[0][2] =< blue <= values[1][2]:
+                        im.putpixel((x,y), (0,0,0))
+                    elif red == blue == green:
+                        im.putpixel((x,y), (0,0,0))
+                    elif red == blue == green == 0:
+                        im.putpixel((x,y), (0,0,0))
+                    elif 139 <= red < = 255 and 101 <= green <= 255 and 8 <= blue <= 224:
+                        redTracker+ = red
+                        greenTracker+ = green
+                        blueTracker+ = blue
+                        x = x + 1
+    averagePeeColor = (redTracker/x, greenTracker/x, blueTracker/x)
+    if 238<=averagePeeColor[0]< 255 and 250<= averagePeeColor[1] < =255 and 205 < = averagePeeColor[2] <= 224:
+        print("You're well hydrated. Keep drinking as much as you are.")
+    elif 238<=averagePeeColor[0]< 255 and 238<= averagePeeColor[1] < =244 and 170 < = averagePeeColor[2] <= 180:
+        print("You're hydration levels are very normal.")
+    elif 205<=averagePeeColor[0]< 255 and 137<= averagePeeColor[1] < =226 and 130 < = averagePeeColor[2] <= 139:
+        print("You're at a normal hydration level, but drink some water soon.") 
+    elif 205<=averagePeeColor[0]< 255 and 155<= averagePeeColor[1] < =193 and 29 < = averagePeeColor[2] <= 37:
+        print("You're dehydrated. Drink some water now.")
+    elif 139<=averagePeeColor[0]< 184 and 101<= averagePeeColor[1] < =134 and 0 < = averagePeeColor[2] <= 20:
+        print("You're severely dehydrated. Drink water IMMEDIATELY!")
+        
